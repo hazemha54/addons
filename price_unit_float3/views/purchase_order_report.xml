@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="purchase_report_document_extand" inherit_id="purchase.report_purchaseorder_document">
+            <xpath expr="//span[@t-field='line.price_unit']" position="replace">
+                      <span t-field="line.price_unit"  t-options='{"widget": "float", "precision": 3}'/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

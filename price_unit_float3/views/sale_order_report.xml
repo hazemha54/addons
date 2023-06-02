@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="sale_report_saleorder_document_extand" inherit_id="sale.report_saleorder_document">
+            <xpath expr="//td[@name='td_priceunit']" position="replace">
+                  <td name="td_priceunit" class="text-right">
+                      <span t-field="line.price_unit"  t-options='{"widget": "float", "precision": 3}'/>
+                  </td>
+            </xpath>
+        </template>
+    </data>
+</odoo>

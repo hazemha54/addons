@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="account_report_invoice_document_extand5410" inherit_id="account.report_invoice_document">
+            <xpath expr="//span[@t-field='line.price_unit']" position="replace">
+                <span class="text-nowrap" t-field="line.price_unit"  t-options='{"widget": "float", "precision": 3}'/>
+            </xpath>
+        </template>
+
+        <template id="account_report_invoice_bon_livraison" inherit_id="delivery_report_extend_last.report_invoice_document_bon_livraison">
+            <xpath expr="//span[@t-field='line.price_unit']" position="replace">
+                <span t-field="line.price_unit"  t-options='{"widget": "float", "precision": 3}'/>
+            </xpath>
+        </template>
+    </data>
+</odoo>
